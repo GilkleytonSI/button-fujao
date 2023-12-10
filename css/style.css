@@ -12,6 +12,11 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.painel img{
+    align-items: center;
+    justify-content: center;
+}
+
 #sim{
     height: 40px;
     width: 60px;
