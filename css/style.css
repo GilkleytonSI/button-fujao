@@ -12,7 +12,7 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.painel img{
+.flex.painel img{
     margin: auto;
     align-items: center;
     justify-content: center;
