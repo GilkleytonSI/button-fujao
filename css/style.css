@@ -13,6 +13,7 @@ body{
 }
 
 .painel img{
+    margin: auto;
     align-items: center;
     justify-content: center;
 }
