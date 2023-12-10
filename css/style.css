@@ -13,9 +13,8 @@ body{
 }
 
 .flex.painel img{
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    display: block;
 }
 
 #sim{
