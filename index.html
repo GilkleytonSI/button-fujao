@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-    <title>Document</title>
+    <script src="js/script.js" defer></script>
+    <title>Pedido Especial</title>
 </head>
 <body>
-    <div class="flex">
+    <div class="container">
         <div class="painel">
             <h1>Minha Linda!!</h1>
-            <img src="images/ursinho.gif" alt="">
+            <img src="images/ursinho.gif" alt="Ursinho carinhoso">
             <h3>Aceita namorar comigo?</h3>
-            <button id="sim" onclick="parabens()"> Sim </button>
-            <button onmouseover="fuja()" id="nao"> Não </button>      
+            <div class="botoes">
+                <button id="sim" onclick="parabens()">Sim</button>
+                <button id="nao" ontouchstart="fugirDaTela()">Não</button>     
+            </div>
         </div>
     </div>   
 </body>
