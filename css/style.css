@@ -1,38 +1,110 @@
-body{
-    background-color: red;
-}
-.painel{
-    margin: auto;
-    background-color: #fff;
-    width: 100%;
-    height: 500px;
-    border-radius: 20px;
-    text-align: center;
-    padding-top: 50px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.flex.painel img{
+body {
+    background-color: #ff4d4d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.painel {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 20px;
     text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.painel h1 {
+    color: #ff4d4d;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.painel img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 20px;
     display: block;
 }
 
-#sim{
-    height: 40px;
-    width: 60px;
-    background-color: red;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    color: #fff;
-    margin-left: -50px;
+.painel h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
 }
-#nao{
-    position: absolute;
-    height: 40px;
-    width: 60px;
-    background-color: red;
-    border: 2px solid #fff;
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+
+#sim, #nao {
+    height: 50px;
+    min-width: 80px;
+    padding: 0 15px;
+    background-color: #ff4d4d;
+    border: none;
     border-radius: 10px;
     color: #fff;
-    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#sim:hover, #nao:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+#nao {
+    position: fixed; /* Permite mover por toda a tela */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    will-change: transform;
+    transition: left 0.3s ease-out, top 0.3s ease-out;
+}
+
+.painel {
+    /* Remova overflow: hidden se existir */
+    position: relative;
+}
+
+
+@media (max-width: 350px) {
+    .painel {
+        padding: 20px 15px;
+    }
+    
+    .painel h1 {
+        font-size: 1.5rem;
+    }
+    
+    .painel h3 {
+        font-size: 1rem;
+    }
+    
+    #sim, #nao {
+        height: 45px;
+        min-width: 70px;
+        font-size: 0.9rem;
+    }
 }
